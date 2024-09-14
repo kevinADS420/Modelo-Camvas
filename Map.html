@@ -3,46 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="style-Camvas/estilo.css">
     <link rel="icon" type="image/x-icon" href="IMG/icons8-fresa-32.png">
 
     <title>HuertoMkt</title>
 </head>
 <body>
+    <section class="Header">
+        <div class="herader-container">
+            <img src="IMG/Imgen Logo.jpg" alt="">
+            <h1> Modelo Canvas</h1>
+            <h2> HuertMKT </h2>
+        </div>
+    </section>
 
-    <map name="figura">
-        <area shape="rect" coords="160,169,279,245" href="11.html" alt="">
-        <area shape="rect" coords="504,144,596,197" href="2.html" alt="">
-        <area shape="rect" coords="791,144,874,198" href="3.html" alt="">
-        <area shape="rect" coords="1101,146,1191,197" href="4.html" alt="">
-        <area shape="rect" coords="497,300,600,360" href="5.html" alt="">
-        <area shape="rect" coords="778,304,894,359" href="6.html" alt="">
-        <area shape="rect" coords="1087,300,1203,348" href="7.html" alt="">
-        <area shape="rect" coords="153,455,274,534" href="8.html" alt="">
-        <area shape="rect" coords="767,458,880,527" href="9.html" alt="">
-    </map>
+    <div class="container">
+        <div class="card" > <h3>1.Socios Clave</h3> <a href="info-Camvas/1.html" > <img class="card-img" src="IMG/sicios Clave.jpg" > </a>   </div>
+        <div class="card" > <h3>2.Actividades Claves</h3> <a href="info-Camvas/2.html" > <img class="card-img" src="IMG/Actividades Claves.jpg" > </a>   </div>
+        <div class="card" > <h3>3.Propuesta De Valor</h3> <a href="info-Camvas/3.html" > <img class="card-img" src="IMG/Propuesta De Valor1.jpg" > </a>   </div>
+        <div class="card" > <h3>4.Relación con Clientes</h3> <a href="info-Camvas/4.html" > <img class="card-img" src="IMG/Relación con Clientes.jpg" > </a>   </div>
+        <div class="card" > <h3>5.Recursos Claves </h3> <a href="info-Camvas/5.html" > <img class="card-img" src="IMG/Recursos Claves.jpg" > </a>   </div>
+        <div class="card" > <h3>6.Canales para mejor comunicación</h3> <a href="info-Camvas/6.html" > <img class="card-img" src="IMG/Canales para mejor comunicación.jpg" > </a>   </div>
+        <div class="card" > <h3>7.Segmentación de clientes</h3> <a href="info-Camvas/7.html" > <img class="card-img" src="IMG/Segmentación de clientes.jpg" > </a>   </div>
+        <div class="card" > <h3>8.Estructura de Costos</h3> <a href="info-Camvas/8.html" > <img class="card-img" src="IMG/Costos.jpg" > </a>   </div>
+        <div class="card" > <h3>9.Ingresos</h3> <a href="info-Camvas/9.html" > <img class="card-img" src="IMG/Ingresos.jpg" > </a>   </div>
+</div>
 
-    <img id="mapImage" src="img map.png" usemap="#figura" width="1350" height="575">
 
-    <script>
-        function ajustarCoordenadas() {
-            var image = document.getElementById('mapImage');
-            var scale = image.width / 1350; // 1350 es el ancho original de la imagen
-
-            var areas = document.querySelectorAll('map[name="figura"] area');
-            areas.forEach(function(area) {
-                var coords = area.getAttribute('coords').split(',').map(Number);
-                for (var i = 0; i < coords.length; i++) {
-                    coords[i] *= scale;
-                }
-                area.setAttribute('coords', coords.join(','));
-            });
-        }
-
-        // Llama a la función al cargar la página y cada vez que la ventana cambia de tamaño
-        window.addEventListener('load', ajustarCoordenadas);
-        window.addEventListener('resize', ajustarCoordenadas);
-    </script>
+    
 
 </body>
 </html>
